@@ -1,0 +1,41 @@
+FE Heroes simulator
+
+infrastructure:
+- base Hero class
+	- subclasses: movement type (Infantry, Cavalry, Flier, Armor)
+	- properties: stats, skills (str map?), ally/enemy
+- base Weapon class
+	- subclasses: weapon type (sword/lance/axe, tome, breath, bow, staff, knife)
+	- properties: might, range, damage type, effect
+- base Passive class
+	- properties: slot, effect
+- base Special class
+	- method: decrement countdown, activate
+- base Assist class
+- set up database and tables
+- instantiate heroes?
+
+1v1 stage: damage calculation
+- attack - def/res
+- speed doubling
+- weapon triangle, effectiveness
+- if staff, halve damage
+- implement A passives
+- implement non-AOE specials
+
+maps
+- 4x7 grid representation
+- tiles and properties (forest, mountain/lake, wall, breakable wall)
+- tile should store which unit is occupying it
+	- calculate where unit can move to (unit.movement range BFS)
+		- calculate where unit can attack
+	- get list of allies within 2 spaces, enemies within 2 spaces (skill range)
+- implement B and C passives
+- implement AOE specials
+- implement assists
+- implement AI movement rules (A*?)
+
+UI
+- select inherited stats
+- select a map (store)
+- position heroes on map
